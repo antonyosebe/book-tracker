@@ -7,6 +7,7 @@ function Navigation() {
             <div className="site-title">BOOK TRACKER</div>
             <NavLink to="/" end>HOME</NavLink>
             <NavLink to="/books">BOOKS</NavLink>
+            <NavLink to="/sets">SETS</NavLink>
         </nav>
     )
 }
