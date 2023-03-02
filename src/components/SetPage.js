@@ -31,7 +31,6 @@ function SetPage({ sets, setSets, books, setBooks }) {
   return (
     <div className="set-page">
         <h2>{ set?.name }</h2>
-        <h3>Published Date: { set?.year }</h3>
         <Link to={`/sets/${id}/books/new`}>
             <button className="form-link" >Add book</button>
         </Link>

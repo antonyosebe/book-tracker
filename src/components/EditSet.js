@@ -45,16 +45,10 @@ function EditSet({ sets, setSets }) {
     <form className="set-form" onSubmit={handleSubmit}>
         <h2>Edit {set.name}</h2>
         <div className="form-text">
-        <label htmlFor="title">Book Title: 
+            <label htmlFor="title">Book Genres: 
                 <input type="textarea" id="name"  value={formData.name} onChange={handleChange}autoFocus={true}/><br />
-            </label>
-            <label htmlFor="author">Author Name: 
-                <input type="textarea" id="author" value={formData.author} onChange={handleChange} /><br />
-            </label>
-            
-            <label htmlFor="year">Publication Year: 
-                <input type="number" id="year" value={formData.year} onChange={handleChange} /><br />
-            </label>
+            </label>    
+           
             <input type="submit" value="Submit" className="form-btn" />
         </div>
     </form>

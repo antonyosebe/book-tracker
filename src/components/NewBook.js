@@ -10,6 +10,7 @@ function NewBook({ books, setBooks, sets, setSets }) {
         name: "",
         author: "",
         review: "",
+        comment: "",
         img_url: ""
     });
 
@@ -52,15 +53,15 @@ function NewBook({ books, setBooks, sets, setSets }) {
             </label>
             
             <label htmlFor="author">Author: 
-                <input type="textarea" id="author" value={formData.name} onChange={handleChange} required="required" /><br />
+                <input type="textarea" id="author" value={formData.author} onChange={handleChange} required="required" /><br />
             </label>
         
             <label htmlFor="review">Reviews: 
-                <input type="number" id="review" value={formData.units} onChange={handleChange} required="required" min="1" max="10" /><br />
+                <input type="number" id="review" value={formData.review} onChange={handleChange} required="required" min="1" max="10" /><br />
             </label>
 
             <label htmlFor="comment ">Comment: 
-                <input type="textarea" id="comment" value={formData.name} onChange={handleChange} required="required"/><br />
+                <input type="textarea" id="comment" value={formData.comment} onChange={handleChange} required="required"/><br />
             </label>
             <label htmlFor="img_url">Image URL: 
                 <input type="textarea" id="img_url" value={formData.img_url} onChange={handleChange} required="required" /><br />
