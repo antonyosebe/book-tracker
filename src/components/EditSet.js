@@ -7,7 +7,6 @@ function EditSet({ sets, setSets }) {
     const set = sets.find(set => set.id===parseInt(id))
     const [ formData, setFormData ] = useState({
         name: "",
-        year: ""
     });
 
     useEffect(() => {
@@ -48,7 +47,6 @@ function EditSet({ sets, setSets }) {
             <label htmlFor="title">Book Genres: 
                 <input type="textarea" id="name"  value={formData.name} onChange={handleChange}autoFocus={true}/><br />
             </label>    
-           
             <input type="submit" value="Submit" className="form-btn" />
         </div>
     </form>
