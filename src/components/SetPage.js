@@ -1,8 +1,32 @@
 import React from 'react';
-import  'react-router-dom';
+import { Link, useParams, useNavigate } from  'react-router-dom';
+import BookCard from './BookCard';
 
+function SetPage({ sets, setSets, books, setBooks }) {
+    const navigate = useNavigate();
+    const { id } = useParams();
+    const set = sets.find(set => set.id===parseInt(id))
+    // const [ set, setSet ] = useState([]);
 
-function SetPage() {
+    // useEffect(() => {
+    //     fetch(`http://localhost:9292/book_sets/${id}`)
+    //     .then(res => res.json())
+    //     .then(data => setSet(data))
+    // }, [])
+    
+    const bookCards = set?.books?.map((book, index)  => <BookCard key={ index } book={ book }/>)
+
+    const handleDelete = () => {
+        fetch(`http://localhost:9292/book_sets/${id}`, 
+            { method: "DELETE" })
+        .then(() => removeSet(id))
+        .then(() => navigate("/sets"));
+    }
+
+    const removeSet = id => {
+        setSets(sets.filter(s => s.id !==id))
+        setBooks(books.filter(mini => mini.book_set_id !==id))
+    }
 
   return (
     <div className="set-page">

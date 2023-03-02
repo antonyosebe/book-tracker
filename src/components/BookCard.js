@@ -6,7 +6,7 @@ function BookCard({ book }) {
      <Link to={`/books/${book.id}`}>
         <div className="card">
             <div className="card-image">
-                <img src={book.img_url} alt="Image not found."/>
+                <img src={book.img_url} alt="not found."/>
             </div>
             <div className="card-name">{book.name}</div>
         </div>
