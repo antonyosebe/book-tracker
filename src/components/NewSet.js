@@ -40,14 +40,16 @@ function NewSet({ sets, setSets }) {
     <form className="set-form"onSubmit={handleSubmit}>
         <h2>New Set Submission</h2>
         <div className="form-text">
-            <label htmlFor="name">Book Title:  
-                <input type="textarea" id="name"value={formData.name} onChange={handleChange} required="required" autoFocus={true}/><br />
-            </label>
-            <label htmlFor="author">Author Name:
-                <input type="textarea" id="author"value={formData.author} onChange={handleChange} required="required" /><br />
-            </label>
-            <label htmlFor="year">Year: 
-                <input type="integer" id="year"value={formData.year} onChange={handleChange} required="required" /><br />
+        <label htmlFor="name">Book Genres: 
+                <select className="new-select" type="textarea" id="name" value={formData.genres} onChange={handleChange} >
+                    <option value=""></option>
+                    <option value="Advenrure">Adventure</option>
+                    <option value="Classics">Classics</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Fantacy">Fantacy</option>
+                    <option value="Horror">Horror</option>
+                    <option value="History">History</option>
+                </select><br />
             </label>
             <input type="submit" value="Submit" className="form-btn" />
         </div>
